@@ -13,7 +13,7 @@
     "webworkers",
     "whateverman"
   ],
-  "author": "jangel",
+  "author": "jangel (jacob.angel@gmail.com)",
   "license": "MIT",
   "devDependencies": {
     "babel": "^5.8.21",
@@ -26,11 +26,10 @@
     "mocha": "^2.2.5",
     "react": "^0.13.3",
     "webpack": "^1.11.0",
-    "webpack-dev-server": "^1.10.1"
-  },
-  "dependencies": {
+    "webpack-dev-server": "^1.10.1",
     "eslint-config-airbnb": "0.0.7",
     "eslint-plugin-react": "^3.2.1",
-    "express": "^4.13.3"
+    "alt": "^0.17.1",
+    "immutable": "^3.7.4"
   }
 }
