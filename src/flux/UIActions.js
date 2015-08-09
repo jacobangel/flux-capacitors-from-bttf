@@ -1,5 +1,4 @@
 import alt from './alt';
-import LaggyActions from './LaggyActions';
 
 class UIActions {
   constructor() {
@@ -7,7 +6,9 @@ class UIActions {
   }
 
   getPrime(n) {
-    LaggyActions.makeNextPrime(n);
+    window.transport.postMessage({
+      payload: n, action: 'MAKE_NEXT_PRIME'
+    });
   }
 }
 

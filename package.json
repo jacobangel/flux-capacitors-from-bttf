@@ -4,8 +4,9 @@
   "description": "A simple POC using workers to init the data layer of a flux app",
   "main": "index.js",
   "scripts": {
-     "test": "mocha ./src/**/__tests__ --recursive --compilers js:babel/register",
+    "test": "mocha ./src/**/__tests__ --recursive --compilers js:babel/register",
     "serve": "webpack-dev-server --colors --watch",
+    "watch": "cp ./index.html ./dist/index.html && webpack --colors --watch",
     "build": "cp ./index.html ./dist/index.html && webpack --colors"
   },
   "keywords": [

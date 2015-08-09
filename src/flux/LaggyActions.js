@@ -1,17 +1,11 @@
-import alt from './alt';
-
+const alt = require('./alt');
 
 class LaggyActions {
-  constructor() {
-    this.generateActions('click', 'save', 'load');
-  }
+  constructor() { }
 
   makeNextPrime(n) {
-    console.log('yay');
-    window.transport.postMessage({
-      payload: n, action: 'MAKE_NEXT_PRIME'
-    });
+    this.dispatch(n);
   }
 }
 
-export default alt.createActions(LaggyActions);
+module.exports = alt.createActions(LaggyActions);

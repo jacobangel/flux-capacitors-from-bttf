@@ -6,13 +6,15 @@ const ClickMaker = require('./ClickMaker');
 const Connected = React.createClass({
   propTypes: {
     clicks: React.PropTypes.number,
+    prime: React.PropTypes.number,
   },
 
   render() {
-    const { clicks } = this.props;
+    const { clicks, prime } = this.props;
     return (
       <div className="cewl">
         <p>Clicked: {clicks}</p>
+        <p>Prime: {prime}</p>
         <ClickMaker clicks={clicks} />
       </div>
     );

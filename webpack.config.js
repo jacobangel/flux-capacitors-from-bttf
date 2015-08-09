@@ -30,7 +30,6 @@ var reactExternal = {
 
 module.exports = {
   entry: {
-      fluxxer: './src/fluxxer.js',
       app: './src/app.js'
   },
   module: {
