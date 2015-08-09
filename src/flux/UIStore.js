@@ -17,7 +17,6 @@ class UIStore {
   }
 
   onMakeNextPrime(n) {
-    console.log('got it bro', n);
     this.setState({
       prime: n,
     });
