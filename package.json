@@ -4,7 +4,7 @@
   "description": "A simple POC using workers to init the data layer of a flux app",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+     "test": "mocha ./src/**/__tests__ --recursive --compilers js:babel/register",
     "serve": "webpack-dev-server --colors --watch",
     "build": "cp ./index.html ./dist/index.html && webpack --colors"
   },
@@ -32,6 +32,7 @@
     "alt": "^0.17.1",
     "immutable": "^3.7.4",
     "worker-loader": "^0.6.0",
-    "react-router": "^0.13.3"
+    "react-router": "^0.13.3",
+    "chai": "^3.2.0"
   }
 }
