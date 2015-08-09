@@ -13,7 +13,7 @@ const Connected = React.createClass({
     return (
       <div className="cewl">
         <p>Clicked: {clicks}</p>
-        <ClickMaker />
+        <ClickMaker clicks={clicks} />
       </div>
     );
   },

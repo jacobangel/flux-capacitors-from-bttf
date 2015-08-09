@@ -6,6 +6,8 @@ console.log('fluxxer');
 if (window.Worker) {
   const dapperWorker = require('worker!./dapper');
   const d = new dapperWorker();
-  d.postMessage({hello: 'world'});
-  d.onmessage = (e) => console.log('got the message');
+
+  d.postMessage(['hello', 'world']);
+  d.onmessage = (e) => console.log('got the message', e);
+  window.transport = d;
 }
