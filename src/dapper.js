@@ -8,23 +8,28 @@ onmessage = function(e) {
   route(e.data);
 };
 
-const UIActions = require('./flux/UIActions');
-
 const PrimeUtils = require('./utils/PrimeUtils');
 
 const nextPrime = (data) => {
   const result = PrimeUtils.getNthPrime(data);
-  postMessage(result);
+  return result;
 };
 
 const registeredAction = {
-  'MAKE_NEXT_PRIME': nextPrime,
+  "UIActions.getPrime": nextPrime,
 };
 
 const route = (data) => {
+  console.log('received');
   if (!registeredAction[data.action]) {
-    postMessage(data);
+    console.log('ignoreed');
   } else {
-    registeredAction[data.action].call(null, data.payload);
+    const result = registeredAction[data.action].call(null, data.data);
+    console.log(result);
+    postMessage({
+      data: result,
+      action: data.action,
+      source: 'worker', // add port or id...
+    });
   }
 };

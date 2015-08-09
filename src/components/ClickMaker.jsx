@@ -14,8 +14,8 @@ const ClickMaker = React.createClass({
   render() {
     return (
       <div className="cewl">
-        <button onClick={this.handleOnClick}>Click Me</button>
-        <button onClick={this.handleOnPrime}>Prime</button>
+        <button key="a" onClick={this.handleOnClick}>Click Me</button>
+        <button key="b" onClick={this.handleOnPrime}>Prime</button>
       </div>
     );
   }

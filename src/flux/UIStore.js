@@ -11,21 +11,19 @@ class UIStore {
     };
 
     this.bindActions(UIActions);
-    this.bindListeners({
-      onMakeNextPrime: LaggyActions.makeNextPrime,
-    });
   }
 
-  onMakeNextPrime(n) {
+  onGetPrime(n) {
     this.setState({
       prime: n,
+      clicks: this.state.clicks,
     });
   }
 
   onClick() {
     const clicks = this.state.clicks + 1;
 
-    this.setState({ clicks, prime: this.state.prime });
+    this.setState({ clicks });
   }
 }
 
