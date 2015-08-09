@@ -30,6 +30,8 @@
     "eslint-config-airbnb": "0.0.7",
     "eslint-plugin-react": "^3.2.1",
     "alt": "^0.17.1",
-    "immutable": "^3.7.4"
+    "immutable": "^3.7.4",
+    "worker-loader": "^0.6.0",
+    "react-router": "^0.13.3"
   }
 }
