@@ -1,5 +1,6 @@
 'use strict';
 
+var path = require('path');
 var webpack = require('webpack');
 
 var plugins = [
@@ -29,7 +30,8 @@ var reactExternal = {
 
 module.exports = {
   entry: {
-      server: './index.js'
+      fluxxer: './src/fluxxer.js',
+      app: './src/app.js'
   },
   module: {
     loaders: [
@@ -38,8 +40,14 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, "dist"),
-    publicPath: '/dist',
+    publicPath: '/dist/',
     filename: '[name].js'
+  },
+  devServer: {
+     contentBase: "./dist",
+     noInfo: true, //  --no-info option
+     hot: true,
+     inline: true
   },
   plugins: plugins,
   resolve: {

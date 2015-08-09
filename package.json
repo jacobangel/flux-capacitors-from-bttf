@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "run": "webpack-dev-server --content-base dist/",
-    "build": "webpack"
+    "serve": "webpack-dev-server --colors --watch",
+    "build": "cp ./index.html ./dist/index.html && webpack --colors"
   },
   "keywords": [
     "flux",
