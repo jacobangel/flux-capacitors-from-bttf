@@ -1,15 +1,11 @@
 # Flux Workers
 
-I'm sure this is already a thing. I'm just tooling around in public, which means
-some of this is likely very naive.
+Using Flux to communicate with Web Workers, so as to perform all non-ui interaction using non-blocking threads.
 
 ## Action Dispatch Between Workers
 
 Distribute the work automatically by passing the action through a worker. It's
 extremely similiar to a techniqued used in [flux-mirror](https://github.com/pstoica/flux-mirror).
-
-```
-```
 
 ## build
 
@@ -27,6 +23,8 @@ This run on webpack-dev-server. Start it as so:
 npm run serve
 ```
 
+Open up browser at http://localhost:8080
+
 ## Alternatives
 
 Promise Based solution for web-workers is probably a smarter approach?
@@ -37,7 +35,7 @@ const worker = require('worker!./Api')
 // wrap worker into promis
 // use like an axios style or fetch.
 
-const workios =-promisifiedWorker(worker).doAction()...
+const workios = promisifiedWorker(worker).doAction()...
 
 ```
 

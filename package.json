@@ -6,8 +6,8 @@
   "scripts": {
     "test": "mocha ./src/**/__tests__ --recursive --compilers js:babel/register",
     "serve": "webpack-dev-server --colors --watch",
-    "watch": "cp ./index.html ./dist/index.html && webpack --colors --watch",
-    "build": "cp ./index.html ./dist/index.html && webpack --colors"
+    "watch": "rsync --recursive ./index.html ./dist/ && webpack --colors --watch",
+    "build": "rsync --recursive ./index.html ./dist/ && webpack --colors"
   },
   "keywords": [
     "flux",
